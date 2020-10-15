@@ -1,1 +1,1 @@
-console.log('PULSE start...');
+console.log('This message from script.js!');
