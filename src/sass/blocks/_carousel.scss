@@ -4,8 +4,13 @@
     position: relative;
     width: 750px;
     margin: 0 auto;
+    img {
+      width: 750px;
+      height: 480px;
+    }
   }
-  .slick-prev, .slick-next {
+  .arrow-prev,
+  .arrow-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -17,7 +22,7 @@
       height: 50px;
     }
   }
-  .slick-next {
+  .arrow-next {
     right: -66px;
     left: auto;
   }
