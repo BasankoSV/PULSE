@@ -1,13 +1,38 @@
-const imgItem = document.querySelector('.imgItem');
-const prev = document.querySelector('.arrow-prev');
-const next = document.querySelector('.arrow-next');
+import carousel from './modules/carousel.js';
+import tabs from './modules/tabs.js';
+import descr from './modules/descr.js';
+import modal from './modules/modal.js';
+import forms from './modules/forms.js';
 
-const changeNameHundler = (sign, a, b) => {
-  currentImg = +imgItem.getAttribute('src').substr(10, 1);
-  nextImg =
-    currentImg + Number(`${sign}1`) == a ? b : currentImg + Number(`${sign}1`);
-  return (imgItem.src = `img/slide_${nextImg}.jpg`);
-};
+const catalogItemContentElem = document.querySelectorAll(
+  '.catalog-item__content'
+);
+const catalogItemContentActiveClass = 'catalog-item__content_active';
+const catalogItemListElem = document.querySelectorAll('.catalog-item__list');
+const catalogItemListActiveClass = 'catalog-item__list_active';
+const overlayElem = document.querySelector('.overlay');
 
-prev.addEventListener('click', () => changeNameHundler('-', 0, 3));
-next.addEventListener('click', () => changeNameHundler('+', 4, 1));
+forms(overlayElem);
+modal(overlayElem);
+carousel();
+tabs(
+  catalogItemContentElem,
+  catalogItemContentActiveClass,
+  catalogItemListElem,
+  catalogItemListActiveClass
+);
+descr(
+  catalogItemContentElem,
+  catalogItemContentActiveClass,
+  catalogItemListElem,
+  catalogItemListActiveClass
+);
+
+window.addEventListener('scroll', function () {
+  let pageUp = document.querySelector('.pageup');
+  if (this.pageYOffset > 1600) {
+    pageUp.style.display = 'block';
+  } else {
+    pageUp.style.display = 'none';
+  }
+});

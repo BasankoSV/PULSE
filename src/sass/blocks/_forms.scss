@@ -17,4 +17,40 @@
       margin-bottom: 20px;
     }
   }
+  &_mt25 {
+    margin-top: 25px;
+  }
+  .error-msg {
+    color: red;
+    font-size: 12px;
+    padding: 0;
+  }
+  /* .phone-numb {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    &_label {
+      width: 300px;
+      height: 50px;
+      margin: 0;
+      padding-left: 20px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #4b4b4b;
+    }
+    &_input {
+      width: 30px;
+      height: 46px;
+      text-align: center;
+      padding: 0;
+      &:nth-child(3) {
+        width: 50px;
+      }
+    }
+  } */
 }
