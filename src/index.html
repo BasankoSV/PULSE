@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pulse</title>
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
-    <link rel="stylesheet" href="css/font.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -54,7 +56,7 @@
           </button>
           <div class="promo__link">
             или
-            <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+            <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a>
           </div>
         </div>
         <!-- div .wrapper -->
@@ -77,7 +79,11 @@
             </div>
           </div>
           <div class="advantages__item">
-            <img class="advantages__icon" src="icons/heart.png" alt="heart" />
+            <img
+              class="advantages__icon advantages__icon_animated"
+              src="icons/heart.png"
+              alt="heart"
+            />
             <div class="advantages__subtitle">Заботимся о здоровье</div>
             <div class="advantages__descr">
               Мы работаем для того, чтобы Ваши занятия спортом шли на пользу
@@ -158,40 +164,55 @@
       </div>
     </section>
 
-    <section class="carousel">
+    <!-- animate__zoomIn -->
+    <div class="carousel">
       <div class="container">
         <div class="carousel__inner">
           <div>
-            <img src="img/slide_1.jpg" alt="slide_1" hidden />
+            <img
+              class="animate__animated"
+              src="img/slide_1.jpg"
+              alt="slide_1"
+              hidden
+            />
           </div>
           <div>
-            <img src="img/slide_2.jpg" alt="slide_2" />
+            <img
+              class="animate__animated"
+              src="img/slide_2.jpg"
+              alt="slide_2"
+            />
           </div>
           <div>
-            <img src="img/slide_3.jpg" alt="slide_3" hidden />
+            <img
+              class="animate__animated"
+              src="img/slide_3.jpg"
+              alt="slide_3"
+              hidden
+            />
           </div>
 
           <button type="button" class="arrow-prev">
-            <img src="icons/left.svg" />
+            <img src="icons/left.svg" alt="arrow-prev" />
           </button>
           <button type="button" class="arrow-next">
-            <img src="icons/right.svg" />
+            <img src="icons/right.svg" alt="arrow-next" />
           </button>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog">
       <div class="container">
         <h2 class="title">Каталог пульсометров</h2>
         <ul class="catalog__tabs">
-          <li class="catalog__tab">
+          <li class="catalog__tab catalog__tab_active">
             <div>Для фитнеса</div>
           </li>
-          <li class="catalog__tab catalog__tab_active"><div>для бега</div></li>
+          <li class="catalog__tab"><div>для бега</div></li>
           <li class="catalog__tab"><div>для триатлона</div></li>
         </ul>
-        <div class="catalog__content">
+        <div class="catalog__content catalog__content_active">
           <div class="catalog-item">
             <div class="catalog-item__wrapper">
               <div class="catalog-item__content catalog-item__content_active">
@@ -434,7 +455,7 @@
             </div>
           </div>
         </div>
-        <div class="catalog__content catalog__content_active">
+        <div class="catalog__content">
           <div class="catalog-item">
             <div class="catalog-item__wrapper">
               <div class="catalog-item__content catalog-item__content_active">
@@ -567,7 +588,11 @@
     <section class="feed">
       <div class="container">
         <h2 class="title">отзывы клиентов</h2>
-        <div class="feed__item">
+        <div
+          class="feed__item wow animate__animated animate__fadeInUp"
+          data-wow-duration="2s"
+          data-wow-delay="2s"
+        >
           <img
             src="img/photo_Irina.png"
             alt="Ирина Иванченко"
@@ -587,7 +612,11 @@
             </div>
           </div>
         </div>
-        <div class="feed__item">
+        <div
+          class="feed__item wow animate__animated animate__fadeInUp"
+          data-wow-duration="2s"
+          data-wow-delay="2s"
+        >
           <img
             src="img/photo_IvanS.png"
             alt="Иван Сёмочкин"
@@ -606,7 +635,11 @@
             </div>
           </div>
         </div>
-        <div class="feed__item">
+        <div
+          class="feed__item wow animate__animated animate__fadeInUp"
+          data-wow-duration="2s"
+          data-wow-delay="2s"
+        >
           <img
             src="img/photo_YuliaD.png"
             alt="Юлия Дашкина"
@@ -636,13 +669,7 @@
       <div class="footer__map"></div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.410290463442!2d37.64465881599115!3d55.76874568055768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a63664af129%3A0x32043f062d12723a!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDMg0YHRgtGA0L7QtdC90LjQtSAxLCDQnNC-0YHQutCy0LAsIDEwNzA3OA!5e0!3m2!1sru!2sru!4v1603956279869!5m2!1sru!2sru"
-        width="100%"
-        height="630"
-        frameborder="0"
-        style="border: 0"
-        allowfullscreen=""
-        aria-hidden="false"
-        tabindex="0"
+        allowfullscreen
       ></iframe>
       <div class="footer__info">
         <address class="footer__addr">Москва, Мясницкий проезд, д.3с1</address>
@@ -700,6 +727,7 @@
       <img src="icons/chevron-circle-up-solid.svg" alt="up" />
     </a>
 
+    <script src="js/modules/wow.min.js"></script>
     <script type="module" src="js/script.js"></script>
   </body>
 </html>
